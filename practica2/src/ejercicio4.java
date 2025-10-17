@@ -7,12 +7,21 @@ public class ejercicio4 {
         //Bucle para crear los numeros
         for (int i=0; i<a.length; i++){
             int x=i+1;
-            System.out.println("Número " +x);
             a[i]=x;
         }
         //Bucle para recorrer el array con posiciones
         for (int i=0; i<a.length; i++){
-            System.out.println(a[i]);
+            System.out.println("["+i+"]"+"->"+a[i]);
         }
+        //Suma de todos ellos
+        int sum=0;
+        for (int i = 0; i < a.length; i++) {
+            sum=a[i]+sum;
+        }
+        System.out.println("Suma de todos ellos "+sum);
+        //Media de todos ellos
+        int med=0;
+        med=sum/a.length;
+        System.out.println("Media "+med);
 }
 }
