@@ -1,5 +1,5 @@
 public class ejercicio3 {
-    static void main(String [] args) {
+    public static void main(String [] args) {
         System.out.println("test");
         //Crea un array de 5 numeros enteros
         int[] a = {54,35,76,93,13};

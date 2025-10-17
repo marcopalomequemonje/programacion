@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 public class ejercicio1 {
-    static void main(String [] args) {
+    public static void main(String [] args) {
         System.out.println("test");
         //Crea un array de 10 posiciones de números pedidos por teclado
         Scanner sc = new Scanner(System.in);
