@@ -19,7 +19,7 @@ public class ejercicio4 {
             sum=a[i]+sum;
         }
         System.out.println("Suma de todos ellos "+sum);
-        //Media de todos ellos
+        //Media
         int med=0;
         med=sum/a.length;
         System.out.println("Media "+med);
