@@ -5,6 +5,7 @@ public class ejercicio3 {
         //Crea un array de 5 numeros enteros
         int[] a = {54,35,76,93,13};
         int menor = a[0];
+        //Bucle para comprobar el menor
         for (int i=0; i<a.length; i++){
             if (a[i] < menor){
                 menor = a[i];
