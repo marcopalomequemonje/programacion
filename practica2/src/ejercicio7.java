@@ -34,9 +34,7 @@ public class ejercicio7 {
         double divpos = totalpos/pos;
         double divneg = totalneg/neg;
         //Imprime en pantalla
-        System.out.println("Hay "+pos+" números positivos");
-        System.out.println("Hay "+neg+" números negativos");
         System.out.println("Media de los valores positivos: "+divpos);
-        System.out.println("Media de los valores positivos: "+divneg);
+        System.out.println("Media de los valores negativos: "+divneg);
     }
 }
