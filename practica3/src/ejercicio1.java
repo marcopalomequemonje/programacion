@@ -6,12 +6,19 @@ public class ejercicio1 {
                 {75.0, null, null, null, 0.0, null},
                 {null, null, -2.0, 9.0, null, 11.0}
         };
+        System.out.println("Array num  ");
         for (int i = 0; i < doub.length; i++) {
+            System.out.print(" Fila "+i+"  ");
             for (int j = 0; j < doub[i].length ; j++) {
-                System.out.print(doub[i][j]+"      ");
+                if (doub[i][j]!=null) {
+                    System.out.print(doub[i][j]+"       ");
+                }
+                else {
+                    System.out.print("          ");
+                }
             }
-            System.out.println();
 
+            System.out.println();
         }
     }
 }
