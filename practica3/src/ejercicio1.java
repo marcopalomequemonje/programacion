@@ -36,7 +36,7 @@ public class ejercicio1 {
                     //EN EL CASO DE QUE QUIERAS CON ALGUN DECIMAL SERIA %10.1f EL 1 TE INDICA CUANTOS DECIMALES QUIERES
                     System.out.printf("%10.0f|",doub[i][j]);
                 }
-                //SI NO PUES MUESTRA ESAPCIO EN BLANCO
+                //SI NO PUES MUESTRA ESPACIO EN BLANCO
                 else {
                     System.out.printf("%10.0s|","");
                 }
