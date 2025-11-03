@@ -22,7 +22,9 @@ public class ejercicio2 {
                 System.out.printf("%10d|",a[i][j]);
                 suma += a[i][j];
             }
-            System.out.println("∑: "+ suma);
+            System.out.println();
+            System.out.printf("%10s","∑: "+ suma);
+            System.out.println();
         }
         System.out.println("--------------------------------------------------------------");
         //Bucle para calcular el mayor de las columnas
