@@ -11,22 +11,27 @@ public class ejercicio2 {
         //Creamos un for para recorrer el array y almecenar los numeros escritos por teclado
         for (int i = 0; i < a.length; i++) {
             for (int j = 0; j < a[i].length; j++) {
+                //AQUI ES DONDE SE GUARDA EL ARRAY
                 a[i][j] = sc.nextInt();
             }
         }
         //Bucle con for para calcular la suma de las filas
         for (int i = 0; i < a.length; i++) {
-            System.out.println("--------------------------------------------------------------");
+            System.out.println("------------------------------------------------------------------");
+            //CREAMOS LA VARIABLE DE SUMA
             int suma = 0;
+            //CREAMOS UN BUCLE PARA QUE VALLA RECORRIENDO EL ARRAY
             for (int j = 0; j < a[i].length; j++) {
-                System.out.printf("%10d|",a[i][j]);
+                System.out.printf("|%5d",a[i][j]);
+                System.out.printf("%5s","");
                 suma += a[i][j];
             }
 
-            System.out.printf("%10s","∑: "+ suma);
+            System.out.printf("|%5s","∑:");
+            System.out.printf("%-5d |",suma);
             System.out.println();
         }
-        System.out.println("--------------------------------------------------------------");
+        System.out.println("------------------------------------------------------------------");
         //Bucle para calcular el mayor de las columnas
         for (int i = 0; i < a[0].length; i++) {
             int mayor = a[0][i];
@@ -35,10 +40,12 @@ public class ejercicio2 {
                     mayor = a[j][i];
                 }
             }
-            System.out.printf("%5s","∑:");
+            System.out.printf("|%5s","∑:");
             System.out.printf("%-5d",mayor);
         }
+        System.out.printf("|%7s    |","TOTAL");
+        System.out.printf("%-5s","");
         System.out.println();
-        System.out.println("--------------------------------------------------------------");
+        System.out.println("------------------------------------------------------------------");
     }
 }
