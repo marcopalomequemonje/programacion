@@ -22,7 +22,7 @@ public class ejercicio2 {
                 System.out.printf("%10d|",a[i][j]);
                 suma += a[i][j];
             }
-            System.out.println();
+
             System.out.printf("%10s","∑: "+ suma);
             System.out.println();
         }
@@ -35,7 +35,8 @@ public class ejercicio2 {
                     mayor = a[j][i];
                 }
             }
-            System.out.print("∑:" + mayor+ "   ");
+            System.out.printf("%5s","∑:");
+            System.out.printf("%-5d",mayor);
         }
         System.out.println();
         System.out.println("--------------------------------------------------------------");
