@@ -16,8 +16,10 @@ public class ejercicio2 {
             }
         }
         //Bucle con for para calcular la suma de las filas
+       //suma total
+        int sumatotal=0;
         for (int i = 0; i < a.length; i++) {
-            System.out.println("------------------------------------------------------------------");
+            System.out.println("-------------------------------------------------------------------");
             //CREAMOS LA VARIABLE DE SUMA
             int suma = 0;
             //CREAMOS UN BUCLE PARA QUE VALLA RECORRIENDO EL ARRAY
@@ -26,12 +28,13 @@ public class ejercicio2 {
                 System.out.printf("%5s","");
                 suma += a[i][j];
             }
+            sumatotal+=suma;
 
             System.out.printf("|%5s","∑:");
             System.out.printf("%-5d |",suma);
             System.out.println();
         }
-        System.out.println("------------------------------------------------------------------");
+        System.out.println("-------------------------------------------------------------------");
         //Bucle para calcular el mayor de las columnas
         for (int i = 0; i < a[0].length; i++) {
             int mayor = a[0][i];
@@ -43,9 +46,9 @@ public class ejercicio2 {
             System.out.printf("|%5s","∑:");
             System.out.printf("%-5d",mayor);
         }
-        System.out.printf("|%7s    |","TOTAL");
+        System.out.printf("|%7s    |",sumatotal);
         System.out.printf("%-5s","");
         System.out.println();
-        System.out.println("------------------------------------------------------------------");
+        System.out.println("-------------------------------------------------------------------");
     }
 }
