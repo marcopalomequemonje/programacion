@@ -24,6 +24,7 @@ public class ejercicio4 {
                 suma += a[i][j];
             }
             sumatotal+=suma;
+            //AQUI LE POONGO ESTA FUNCION PARA QUE MUESTRE CON RETARDO DE 3s
             try {
                 Thread.sleep(3000);
                 System.out.printf("|%5s", "∑:");
