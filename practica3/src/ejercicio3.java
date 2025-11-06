@@ -8,7 +8,7 @@ System.out.println("Modifica el programa anterior de tal forma que los números 
         for (int i = 0; i < a.length; i++) {
             for (int j = 0; j < a[i].length; j++) {
                 //AQUI ES DONDE SE GUARDA EL ARRAY QUE LE PONEMOS NUMEROS ALEATORIOS
-                a[i][j]=(int) (Math.random()*9999+1);
+                a[i][j]=(int) (Math.random()*1999+1);
             }
         }
         //Bucle con for para calcular la suma de las filas
