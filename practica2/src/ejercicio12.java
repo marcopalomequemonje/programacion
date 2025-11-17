@@ -11,5 +11,6 @@ public class ejercicio12 {
         int dni=sc.nextInt();
         int l=dni%23;
         System.out.println("La letra del DNI introducido es "+abc[l]);
+
     }
 }
