@@ -8,7 +8,7 @@ public class ejercicio7 {
         int [] a = new int[10];
         //Pedir los 10 numeros por teclado
         for (int i = 0; i < a.length; i++) {
-            System.out.println("Introduce un número ");
+            System.out.println("Introduce un número: ");
             a[i]= sc.nextInt();
         }
         //Variables negativas, positivas y 0

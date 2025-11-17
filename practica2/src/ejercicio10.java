@@ -5,7 +5,7 @@ public class ejercicio10 {
         System.out.println("Crea un programa que muestre por pantalla la nota de un estudiante, de entre una lista de estudiantes con sus respectivas notas. El nombre del estudiante lo introduce el usuario por teclado (usa la clase Scanner). Utiliza un array para los nombres de los alumnos y otro para las notas. ¿Serías capaz de hacerlo con un array BIdimensional?");
         //Pedir nombre por teclado por teclado
         Scanner sc = new Scanner(System.in);
-        System.out.println("Introduce el nombre del alumno: ");
+        System.out.println("Introduce el nombre del alumno ");
         String nombre= sc.nextLine();
         //Crear Arrays
         String[] aestudiantes={"Marco","Alvaro","Sergio","Raul","Cristian"};

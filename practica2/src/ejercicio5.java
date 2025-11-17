@@ -5,7 +5,7 @@ public class ejercicio5 {
         System.out.println("Crea un array de números donde le indicamos por teclado el tamaño del array, rellenaremos el array con números aleatorios entre 0 y 9, al final muestra por pantalla el valor de cada posición y la suma de todos los valores.");
         //Pide el numero del array por teclado
         Scanner sc = new Scanner(System.in);
-        System.out.println("Establece el tamaño que desees para crear un Array");
+        System.out.println("Establece el tamaño que desees para crear un Array.");
         int x = sc.nextInt();
         //Array
         int[] a = new int[x];

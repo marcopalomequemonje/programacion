@@ -6,7 +6,7 @@ public class ejercicio9 {
                 "Pida al usuario por teclado 10 números enteros y los guarde en un array.\n" +
                 "Recorra el array para encontrar:\n" +
                 "El valor máximo y la posición en la que aparece.\n" +
-                "El valor mínimo y la posición en la que aparece.\n");
+                "El valor mínimo y la posición en la que aparece\n");
 
         Scanner sc = new Scanner(System.in);
         //Crear Array con 10 numeros

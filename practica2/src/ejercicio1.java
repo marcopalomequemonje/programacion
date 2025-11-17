@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class ejercicio1 {
     public static void main(String [] args) {
         System.out.println("Crea un array de 10 posiciones de números con valores pedidos por teclado. Muestra por\n" +
-                "consola el índice y el valor al que corresponde.");
+                "consola el índice y el valor al que corresponde");
         //Crea un array de 10 posiciones de números pedidos por teclado
         Scanner sc = new Scanner(System.in);
         int[] arrayInt = new int [10];

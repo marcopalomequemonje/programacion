@@ -15,7 +15,7 @@ public class ejercicio8 {
         //pide uno por uno su altura
         for (int i = 0; i < a.length; i++) {
             posicion += +1;
-            System.out.println("Introduce altura de la persona "+posicion+"en metros con decimal exacto ");
+            System.out.println("Introduce altura de la persona "+posicion+"en metros con decimal exacto: ");
             a[i]= sc.nextDouble();
         }
         //Creamos variables de altura media
