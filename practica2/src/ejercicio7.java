@@ -16,7 +16,10 @@ public class ejercicio7 {
         int neg=0;
         int totalpos=0;
         int totalneg=0;
+        int par=0;
+        int impar=0;
         //recorre el array con for y calcula los numeros
+
         for (int i = 0; i < a.length; i++) {
             //Calcula positivos
             if (a[i]>0){
@@ -30,11 +33,27 @@ public class ejercicio7 {
             }
 
         }
+        //
+        for (int i = 0; i < a.length; i++) {
+            //Calcula par
+            if (a[i]%2==0){
+                par++;
+            }
+            //Calcula impar
+            else {
+                impar++;
+
+            }
+
+        }
         //Hacer la media
-        double divpos = totalpos/pos;
-        double divneg = totalneg/neg;
+        double divpos = (double) totalpos /pos;
+        double divneg = (double) totalneg /neg;
         //Imprime en pantalla
         System.out.println("Media de los valores positivos: "+divpos);
         System.out.println("Media de los valores negativos: "+divneg);
+        System.out.println("Hay "+par+" números par");
+        System.out.println("Hay "+impar+" números impares");
+
     }
 }
