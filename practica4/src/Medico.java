@@ -7,10 +7,10 @@ public class Medico {
     private Integer edad;
     private String sexo;
     private double sueldo_bruto;
-    private LocalDate fecha_inicio;
+    private Integer fecha_inicio;
     private Area area;
     //CONSTRUCTOR
-    public Medico(String DNI, String nombre, Integer edad, String sexo, double sueldo_bruto, LocalDate fecha_inicio, Area area){
+    public Medico(String DNI, String nombre, Integer edad, String sexo, double sueldo_bruto, Integer fecha_inicio, Area area){
         this.DNI=DNI;
         this.nombre=nombre;
         this.edad=edad;
@@ -26,7 +26,7 @@ public class Medico {
         public Integer getEdad() {return edad;}
         public String getSexo() {return sexo;}
         public double getSueldo_bruto() {return sueldo_bruto;}
-        public LocalDate getFecha_inicio() {return fecha_inicio;}
+        public Integer getFecha_inicio() {return fecha_inicio;}
         public Area getArea() {return area;}
         //SET
         public void setDNI(String DNI) {this.DNI = DNI;}
@@ -34,6 +34,6 @@ public class Medico {
         public void setEdad(Integer edad) {this.edad = edad;}
         public void setSexo(String sexo) {this.sexo = sexo;}
         public void setSueldo_bruto(double sueldo_bruto) {this.sueldo_bruto = sueldo_bruto;}
-        public void setFecha_inicio(LocalDate fecha_inicio) {this.fecha_inicio = fecha_inicio;}
+        public void setFecha_inicio(Integer fecha_inicio) {this.fecha_inicio = fecha_inicio;}
         public void setArea(Area area) {this.area = area;}
 }
