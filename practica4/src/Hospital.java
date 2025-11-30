@@ -25,5 +25,42 @@ public class Hospital {
     public void setCIF(String CIF) {this.CIF = CIF;}
     public void setListaArea(ArrayList<Area> listaArea) {this.listaArea = listaArea;}
     public void setDireccion(Direccion direccion) {this.direccion = direccion;}
+    //FUNCIONES
+    //AGREGAR MEDICO A ARRAYLIST
+    public void añadirArea(Area nuevaArea){
+        this.listaArea.add(nuevaArea);
+    }
+    //CALCULO AGREGADO
+    public Integer getNumeroTotalMedicos(){
+        int suma=0;
+        for (int i = 0; i < this.listaArea.size(); i++) {
+            suma+=this.listaArea.get(i).getNumMedicos();
+        }
+        return suma;
+    }
+    //CALCULO DE PROPORCION
+    public double getProporcionMedicosArea(String idArea){
+        double proporcion=0.0;
+        for (int i = 0; i < this.listaArea.size(); i++) {
+            if (idArea.equals(this.listaArea.get(i).getIdentificador())){
+                proporcion=this.listaArea.get(i).getNumMedicos()*(getNumeroTotalMedicos());
+            }
+        }
+        return proporcion;
+    }
+    //COMPROBACION DE EXISTENCIA
+    public boolean existeArea(String idArea){
+        boolean resultado=false;
+        for (int i = 0; i < listaArea.size(); i++) {
+            if (this.listaArea.get(i).getIdentificador().equals(idArea)){
+                resultado=true;
+                break;
+            }
+            else {
+                resultado=false;
+            }
+        }
+        return resultado;
+    }
 
 }
