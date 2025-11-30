@@ -27,7 +27,22 @@ public class Area {
     public void setHospital(Hospital hospital) {this.hospital = hospital;}
     public void setNumMedicos(int numMedicos) {this.numMedicos = numMedicos;}
     //FUNCIONES
+    //Regla de Gestión Automática
     public void aumentarMedico(){
         this.numMedicos++;
     }
+    //COMPROBACION Y COMPARACION
+    public String compararMedicos(Area otraArea){
+        if (this.numMedicos > otraArea.getNumMedicos()){
+            return this.nombre;
+        }
+        else {
+            return otraArea.getNombre();
+        }
+    }
+    //CÁLCULO DE CAPACIDAD
+    public int calcularCapacidadRestante(int capacidadMaxima){
+        return this.numMedicos<capacidadMaxima?capacidadMaxima-this.numMedicos:0;
+    }
+
 }
