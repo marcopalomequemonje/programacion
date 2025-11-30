@@ -1,3 +1,5 @@
+import java.time.LocalDate;
+
 public class Contrato {
     //ATRIBUTOS
     private Integer fecha_creacion;
@@ -10,12 +12,23 @@ public class Contrato {
         this.hospital=hospital;
     }
     //METODOS GET Y SET
-        //GET
-        public Integer getFecha_creacion() {return fecha_creacion;}
-        public Medico getMedico() {return medico;}
-        public Hospital getHospital() {return hospital;}
-        //SET
-        public void setFecha_creacion(Integer fecha_creacion) {this.fecha_creacion = fecha_creacion;}
-        public void setMedico(Medico medico) {this.medico = medico;}
-        public void setHospital(Hospital hospital) {this.hospital = hospital;}
+    //GET
+    public Integer getFecha_creacion() {return fecha_creacion;}
+    public Medico getMedico() {return medico;}
+    public Hospital getHospital() {return hospital;}
+    //SET
+    public void setFecha_creacion(Integer fecha_creacion) {this.fecha_creacion = fecha_creacion;}
+    public void setMedico(Medico medico) {this.medico = medico;}
+    public void setHospital(Hospital hospital) {this.hospital = hospital;}
+    //FUNCIONES
+    //COMPROBACION DE AÑO
+    public boolean esDeAnio(int anio){
+        return anio==this.medico.getFecha_inicio()?true:false;
+    }
+    //CALCULO DE VIGENCIA
+    public Integer diasDesdeCreacion(){
+        LocalDate fechaActual=LocalDate.now();
+        int anioActual=fechaActual.getYear();
+        return anioActual-this.fecha_creacion;
+    }
 }
