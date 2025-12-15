@@ -1,59 +1,29 @@
 public class Direccion {
     //ATRIBUTOS
     private String calle;
-    private int numero;
-    private int codigoPostal;
+    private Integer numero;
+    private Integer codigoPostal;
     private String localidad;
     private String provincia;
     //CONSTRUCTOR
-    public Direccion (String calle, int numero, int codigoPostal, String localidad, String provincia){
-        this.calle=calle;
-        this.numero=numero;
-        this.codigoPostal=codigoPostal;
-        this.localidad=localidad;
-        this.provincia=provincia;
+    public Direccion(String  c, Integer num, Integer cp, String lc, String pv){
+        this.calle=c;
+        this.numero=num;
+        this.codigoPostal=cp;
+        this.localidad=lc;
+        this.provincia=pv;
     }
     //METODOS GET Y SET
-    //GET
-
-    public String getCalle() {
-        return calle;
-    }
-
-    public int getNumero() {
-        return numero;
-    }
-
-    public int getCodigoPostal() {
-        return codigoPostal;
-    }
-
-    public String getLocalidad() {
-        return localidad;
-    }
-
-    public String getProvincia() {
-        return provincia;
-    }
-    //SET
-
-    public void setCalle(String calle) {
-        this.calle = calle;
-    }
-
-    public void setNumero(int numero) {
-        this.numero = numero;
-    }
-
-    public void setCodigoPostal(int codigoPostal) {
-        this.codigoPostal = codigoPostal;
-    }
-
-    public void setLocalidad(String localidad) {
-        this.localidad = localidad;
-    }
-
-    public void setProvincia(String provincia) {
-        this.provincia = provincia;
-    }
+        //GET
+        public String getCalle() {return this.calle;}
+        public Integer getNumero() {return this.numero;}
+        public Integer getCodigoPostal() {return this.codigoPostal;}
+        public String getLocalidad() {return this.localidad;}
+        public String getProvincia() {return this.provincia;}
+        //SET
+        public void setCalle(String calle) {this.calle = calle;}
+        public void setNumero(Integer numero) {this.numero = numero;}
+        public void setCodigoPostal(Integer codigoPostal) {this.codigoPostal = codigoPostal;}
+        public void setLocalidad(String localidad) {this.localidad = localidad;}
+        public void setProvincia(String provincia) {this.provincia = provincia;}
 }
