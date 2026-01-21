@@ -44,4 +44,16 @@ public class Estadisticas {
     public void setVida(int vida) {
         this.vida = vida;
     }
+
+    public boolean comprobarInteligencia (int inteli){
+
+        if (this.inteligencia<inteli){
+            System.out.println("La inteligencia es menor");
+            return false;
+        }
+        else {
+            System.out.println("La inteligencia es mayor");
+            return true;
+        }
+    }
 }
