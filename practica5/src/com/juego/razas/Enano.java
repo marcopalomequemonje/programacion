@@ -1,4 +1,26 @@
 package com.juego.razas;
 
-public class Enano {
+import com.juego.modelo.Estadisticas;
+
+public class Enano implements Raza{
+    private Estadisticas estadisticas;
+    //CONTRUCTOR
+    public Enano(Estadisticas estadisticas) {
+        this.estadisticas = estadisticas;
+    }
+//METODOS GET Y SET
+
+    public Estadisticas getEstadisticas() {
+        return estadisticas;
+    }
+
+    public void setEstadisticas(Estadisticas estadisticas) {
+        this.estadisticas = estadisticas;
+    }
+    //USAMOS OVERRIDE PARA SOBREESCRIBIR
+    @Override
+    //FUNCIONES
+    public void baseEstadisticas(Estadisticas estadisticas) {
+
+    }
 }

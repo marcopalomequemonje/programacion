@@ -1,4 +1,27 @@
 package com.juego.clases;
 
-public class Bardo {
+import com.juego.modelo.Estadisticas;
+//ATRIBUTOS
+public class Bardo implements Clase {
+    private Estadisticas estadisticas;
+//CONTRUCTOR
+    public Bardo(Estadisticas estadisticas) {
+        this.estadisticas = estadisticas;
+    }
+//METODOS GET Y SET
+
+    public Estadisticas getEstadisticas() {
+        return estadisticas;
+    }
+
+    public void setEstadisticas(Estadisticas estadisticas) {
+        this.estadisticas = estadisticas;
+    }
+    //USAMOS OVERRIDE PARA SOBREESCRIBIR
+    @Override
+    //FUNCIONES
+    public void bonificadorEstadisticas(Estadisticas estadisticas) {
+
+    }
 }
+

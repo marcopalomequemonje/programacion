@@ -1,4 +1,5 @@
 package com.juego.habilidades;
 
-public class DañoCuerpoCuerpo {
+public class DanioDistancia {
+
 }
