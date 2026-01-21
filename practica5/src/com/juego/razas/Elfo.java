@@ -21,6 +21,9 @@ public class Elfo implements Raza{
     @Override
     //FUNCIONES
     public void baseEstadisticas(Estadisticas estadisticas) {
-
+        estadisticas.setFuerza(4);
+        estadisticas.setInteligencia(6);
+        estadisticas.setDestreza(7);
+        estadisticas.setVida(90);
     }
 }
