@@ -21,6 +21,9 @@ public class Enano implements Raza{
     @Override
     //FUNCIONES
     public void baseEstadisticas(Estadisticas estadisticas) {
-
+        estadisticas.setFuerza(7);
+        estadisticas.setInteligencia(4);
+        estadisticas.setDestreza(4);
+        estadisticas.setVida(110);
     }
 }
