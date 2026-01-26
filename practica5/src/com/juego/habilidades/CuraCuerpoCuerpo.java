@@ -1,5 +1,42 @@
 package com.juego.habilidades;
 
-public class CuraCuerpoCuerpo {
+public class CuraCuerpoCuerpo implements Habilidad{
+    private String nombre;
+    private int danio;
+    private int contador;
 
+    public CuraCuerpoCuerpo() {
+        this.nombre = "Cura";
+        this.danio = 40;
+        this.contador = 3;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public int getDanio() {
+        return danio;
+    }
+
+    public void setDanio(int danio) {
+        this.danio = danio;
+    }
+
+    public int getContador() {
+        return contador;
+    }
+
+    public void setContador(int contador) {
+        this.contador = contador;
+    }
+    //FUNCIONES
+    @Override
+    public void usarHabilidad() {
+        this.contador--;
+    }
 }
