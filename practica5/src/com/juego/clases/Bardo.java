@@ -6,7 +6,6 @@ public class Bardo implements Clase {
 
 //CONTRUCTOR
     public Bardo() {
-
     }
 
     //USAMOS OVERRIDE PARA SOBREESCRIBIR
