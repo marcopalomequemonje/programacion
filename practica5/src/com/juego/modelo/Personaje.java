@@ -1,13 +1,20 @@
 package com.juego.modelo;
 
 import com.juego.clases.Clase;
+import com.juego.habilidades.CuraCuerpoCuerpo;
+import com.juego.habilidades.DanioCuerpoCuerpo;
+import com.juego.habilidades.DanioDistancia;
+import com.juego.habilidades.Habilidad;
 import com.juego.razas.Raza;
+
+import java.util.ArrayList;
 
 public class Personaje {
     private String nombre;
     private Raza raza;
     private Clase clase;
     private Estadisticas estadisticas;
+    private ArrayList<Habilidad> listaHabilidades;
 
     public Personaje(String nombre,Raza raza, Clase clase){
         this.nombre=nombre;
@@ -16,6 +23,7 @@ public class Personaje {
         this.estadisticas=new Estadisticas();
         raza.baseEstadisticas(this.estadisticas);
         clase.bonificadorEstadisticas(this.estadisticas);
+        this.listaHabilidades=new ArrayList<>();
 
     }
 
@@ -49,6 +57,12 @@ public class Personaje {
 
     public void setEstadisticas(Estadisticas estadisticas) {
         this.estadisticas = estadisticas;
+    }
+    //FUNCIONES
+    public void anadirHabilidad() {
+        this.listaHabilidades.add(new DanioCuerpoCuerpo());
+        this.listaHabilidades.add(new DanioDistancia());
+        this.listaHabilidades.add(new CuraCuerpoCuerpo());
     }
 }
 

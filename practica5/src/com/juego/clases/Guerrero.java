@@ -21,6 +21,7 @@ public class Guerrero implements Clase {
     @Override
     //FUNCIONES
     public void bonificadorEstadisticas(Estadisticas estadisticas) {
-
+    estadisticas.setFuerza(estadisticas.getFuerza()+3);
+    estadisticas.setVida(estadisticas.getVida()+120);
     }
 }

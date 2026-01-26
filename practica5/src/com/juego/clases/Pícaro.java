@@ -21,6 +21,7 @@ public class Pícaro implements Clase{
     @Override
     //FUNCIONES
     public void bonificadorEstadisticas(Estadisticas estadisticas) {
-
+    estadisticas.setDestreza(estadisticas.getDestreza()+3);
+    estadisticas.setVida(estadisticas.getVida()+105);
     }
 }

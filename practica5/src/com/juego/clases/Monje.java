@@ -21,6 +21,8 @@ public class Monje implements Clase{
     @Override
     //FUNCIONES
     public void bonificadorEstadisticas(Estadisticas estadisticas) {
-
+    estadisticas.setFuerza(estadisticas.getFuerza()+2);
+    estadisticas.setDestreza(estadisticas.getDestreza()+1);
+    estadisticas.setVida(getEstadisticas().getVida()+110);
     }
 }

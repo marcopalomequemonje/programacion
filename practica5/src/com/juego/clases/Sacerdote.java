@@ -21,6 +21,7 @@ public class Sacerdote implements Clase {
     @Override
     //FUNCIONES
     public void bonificadorEstadisticas(Estadisticas estadisticas) {
-
+    estadisticas.setInteligencia(estadisticas.getInteligencia()+3);
+    estadisticas.setVida(estadisticas.getVida()+95);
     }
 }
