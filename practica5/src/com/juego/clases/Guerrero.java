@@ -3,20 +3,9 @@ package com.juego.clases;
 import com.juego.modelo.Estadisticas;
 
 public class Guerrero implements Clase {
-    private Estadisticas estadisticas;
     //CONTRUCTOR
-    public Guerrero(Estadisticas estadisticas) {
-        this.estadisticas = estadisticas;
-    }
-//METODOS GET Y SET
-
-    public Estadisticas getEstadisticas() {
-        return estadisticas;
-    }
-
-    public void setEstadisticas(Estadisticas estadisticas) {
-        this.estadisticas = estadisticas;
-    }
+    public Guerrero() {}
+//METODOS
     //USAMOS OVERRIDE PARA SOBREESCRIBIR
     @Override
     //FUNCIONES
