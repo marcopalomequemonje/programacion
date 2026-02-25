@@ -1,0 +1,15 @@
+Madrid;3223000;Mediterraneo;4
+Barcelona;1620000;Mediterraneo;3
+Ciudad de Mexico;9200000;Templado;7
+Buenos Aires;3075000;Templado;5
+Nueva York;8419000;Continental;6
+Los Angeles;3980000;Seco;5
+Paris;2161000;Oceanico;4
+Londres;8982000;Oceanico;3
+Tokio;13960000;Subtropical;5
+Santiago;5614000;Mediterraneo;6
+Bogota;7744000;Frio;4
+Lima;9675000;Desertico;6
+Roma;2873000;Mediterraneo;3
+Berlin;3669000;Continental;2
+Toronto;2930000;Continental;3
