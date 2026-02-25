@@ -58,6 +58,18 @@ public class Personaje {
     public void setEstadisticas(Estadisticas estadisticas) {
         this.estadisticas = estadisticas;
     }
+
+    @Override
+    public String toString() {
+        return "Personaje{" +
+                "nombre='" + nombre + '\'' +
+                ", raza=" + raza +
+                ", clase=" + clase +
+                ", estadisticas=" + estadisticas +
+                ", listaHabilidades=" + listaHabilidades +
+                '}';
+    }
+
     //FUNCIONES
     public void anadirHabilidad() {
         this.listaHabilidades.add(new DanioCuerpoCuerpo());
