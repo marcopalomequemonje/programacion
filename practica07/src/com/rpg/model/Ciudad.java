@@ -6,6 +6,8 @@ public class Ciudad {
     private String clima;
     private int riesgo;
 
+    public Ciudad(){}
+
     public Ciudad(String nombre, int poblacion, String clima, int riesgo) {
         this.nombre = nombre;
         this.poblacion = poblacion;
