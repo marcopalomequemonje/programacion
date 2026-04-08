@@ -33,7 +33,7 @@ public class CiudadDAO {
                 String nombreCiudad = resultset.getString("nombre");
                 int nivel_minimo_acceso = resultset.getInt("nivel_minimo_acceso");
                 this.ciudades.add(new Ciudades(idCiudad, nombreCiudad, nivel_minimo_acceso));
-                System.out.println(idCiudad + "\t" + nombreCiudad+"\t"+nivel_minimo_acceso);
+                //System.out.println(idCiudad + "\t" + nombreCiudad+"\t"+nivel_minimo_acceso);
             }
 
         } catch (SQLException e) {
