@@ -1,9 +1,6 @@
 package rpg.dao;
 
-import rpg.model.Items;
-import rpg.model.Personaje;
-import rpg.model.Raza;
-import rpg.model.Clases_RPG;
+import rpg.model.*;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -17,13 +14,17 @@ public class PersonajeDAO {
     private RazaDAO razaDAO;
     private ClaseDAO claseDAO;
     private CiudadDAO ciudadDAO;
+    private HabilidadDAO habilidadDAO;
+    private ConexionDB conexionDB;
 
     public PersonajeDAO() {
         this.personajes = new ArrayList<>();
-        cargaPersonaje();
         this.razaDAO=new RazaDAO();
         this.claseDAO=new ClaseDAO();
         this.ciudadDAO= new CiudadDAO();
+        this.conexionDB=new ConexionDB();
+        this.habilidadDAO=new HabilidadDAO();
+        cargaPersonaje();
     }
 
     public ArrayList<Personaje> getPersonajes() {
@@ -32,6 +33,46 @@ public class PersonajeDAO {
 
     public void setPersonajes(ArrayList<Personaje> personajes) {
         this.personajes = personajes;
+    }
+
+    public RazaDAO getRazaDAO() {
+        return razaDAO;
+    }
+
+    public void setRazaDAO(RazaDAO razaDAO) {
+        this.razaDAO = razaDAO;
+    }
+
+    public ClaseDAO getClaseDAO() {
+        return claseDAO;
+    }
+
+    public void setClaseDAO(ClaseDAO claseDAO) {
+        this.claseDAO = claseDAO;
+    }
+
+    public CiudadDAO getCiudadDAO() {
+        return ciudadDAO;
+    }
+
+    public void setCiudadDAO(CiudadDAO ciudadDAO) {
+        this.ciudadDAO = ciudadDAO;
+    }
+
+    public HabilidadDAO getHabilidadDAO() {
+        return habilidadDAO;
+    }
+
+    public void setHabilidadDAO(HabilidadDAO habilidadDAO) {
+        this.habilidadDAO = habilidadDAO;
+    }
+
+    public ConexionDB getConexionDB() {
+        return conexionDB;
+    }
+
+    public void setConexionDB(ConexionDB conexionDB) {
+        this.conexionDB = conexionDB;
     }
 
     public void cargaPersonaje() {
@@ -48,10 +89,11 @@ public class PersonajeDAO {
                 int id_raza = resultset.getInt("id_raza");
                 int id_clase = resultset.getInt("id_clase");
                 int id_ciudad_actual = resultset.getInt("id_ciudad_actual");
+                Raza raza=buscarRaza(id_raza);
+                Clases_RPG clase = buscarClase(id_clase);
+                Ciudades ciudad = buscarCiudad(id_ciudad_actual);
 
-
-                //this.personajes.add(new Personaje(idPersonaje,nombrePersonaje,nivel,oro,vida_actual,id_raza,id_clase,id_ciudad_actual));
-                //System.out.println(idItem+ "\t" +nombreItem+ "\t" +tipoItem+ "\t" +precioOro+ "\t" +bonificador_ataque+ "\t" +bonificador_defensa);
+                this.personajes.add(new Personaje(idPersonaje,nombrePersonaje,nivel,oro,vida_actual,raza,clase,ciudad));
             }
 
         } catch (SQLException e) {
@@ -60,35 +102,53 @@ public class PersonajeDAO {
         }
     }
 
-    public Raza buscarRaza(int id_raza){
-        Raza razaBuscada = null;
-        for (Raza raza: razaDAO.getRazas()){
-            if (raza.getId()==id_raza){
-                razaBuscada=raza;
+    public Raza buscarRaza(Integer id) {
+        ResultSet resultset = conexionDB.executeQuery("SELECT * FROM razas WHERE id = " + id);
+
+        try {
+            if (resultset.next()) {
+                String nombre = resultset.getString("nombre");
+                int bonificador_vida = resultset.getInt("bonificador_vida");
+                int bonificador_fuerza = resultset.getInt("bonificador_fuerza");
+
+                return new Raza(id, nombre, bonificador_vida, bonificador_fuerza);
             }
+        } catch (SQLException e) {
+            e.printStackTrace();
         }
-        return razaBuscada;
+
+        return null;
     }
 
-    public Clases_RPG buscarClase(int id_clase){
-        Clases_RPG claseBuscada = null;
-        for (Clases_RPG cLase: claseDAO.getClases()){
-            if (cLase.getId()==id_clase){
-                claseBuscada=cLase;
+    public Clases_RPG buscarClase(Integer id_clase){
+        ResultSet resultset = conexionDB.executeQuery("SELECT * FROM clases_rpg WHERE id = " + id_clase);
+
+        try {
+            if (resultset.next()) {
+                String nombre = resultset.getString("nombre");
+                return new Clases_RPG(id_clase, nombre);
             }
+        } catch (SQLException e) {
+            e.printStackTrace();
         }
-        return claseBuscada;
+
+        return null;
     }
 
-    /*public Clases_RPG buscarClase(int id_clase){
-        Clases_RPG claseBuscada = null;
-        for (Clases_RPG cLase: claseDAO.getClases()){
-            if (cLase.getId()==id_clase){
-                claseBuscada=cLase;
+    public Ciudades buscarCiudad(Integer id_ciudad_actual){
+        ResultSet resultset = conexionDB.executeQuery("SELECT * FROM ciudades WHERE id = " + id_ciudad_actual);
+
+        try {
+            if (resultset.next()) {
+                String nombre = resultset.getString("nombre");
+                int nivel_minimo_acceso = resultset.getInt("nivel_minimo_acceso");
+
+                return new Ciudades(id_ciudad_actual, nombre, nivel_minimo_acceso);
             }
+        } catch (SQLException e) {
+            e.printStackTrace();
         }
-        return claseBuscada;
-    }*/
 
-
+        return null;
+    }
 }
